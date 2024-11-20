@@ -1,0 +1,222 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #5c5776;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Título */
+h1 {
+  color: #18113c;  /* Color para el título */
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo de los formularios y entradas */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;  /* Color del texto */
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+button {
+  background-color: #1C3247;  /* Color coherente para el botón */
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FE9900;  /* Color más claro al pasar el mouse */
+}
+
+/* Botón deshabilitado */
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Estilo de selección de materias */
+.selected-subjects {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.materias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Haciendo que cada materia ocupe menos espacio */
+  gap: 15px;  /* Menor espacio entre las tarjetas */
+  margin-top: 20px;
+}
+
+.materia-card {
+  border: 1px solid #198754;
+  padding: 15px;  /* Menos padding para hacer la tarjeta más pequeña */
+  border-radius: 5px;
+  background-color: #198754;
+  text-align: center;
+  transition: transform 0.3s;
+  font-size: 0.9em;  /* Reducido el tamaño de la fuente para que se vea más compacto */
+}
+
+.materia-card:hover {
+  transform: scale(1.05);  /* Efecto de aumento al pasar el mouse */
+}
+
+.materia-card.disabled {
+  color: #1C3247;
+  opacity: 0.7;
+  background-color: #198754;
+}
+
+.materia-card h4 {
+  font-size: 1.1em;  /* Fuente ligeramente más pequeña */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.materia-card .precedencia {
+  font-size: 0.85em;  /* Fuente más pequeña para la precedencia */
+  color: white;
+  margin-top: 5px;
+}
+
+.materia-card .creditos {
+  color: white;  /* Color verde para créditos */
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Estilo de los mensajes */
+.error {
+  color: red;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Selector de niveles */
+.nivel-selector {
+  margin-bottom: 30px;
+}
+
+.nivel-selector label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #5c5776;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Resumen de inscripción */
+.resumen {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 5px;
+}
+
+#validacion-final {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Estilo de la lista de materias seleccionadas */
+#lista-materias {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#lista-materias li {
+  background-color: #f8f9fa;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #18113c;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.warning {
+  color: orange;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+.materia.aprobada button {
+  background-color: #ccc; /* Gris para las materias aprobadas */
+  cursor: not-allowed; /* Cambio de cursor para indicar que no se puede seleccionar */
+}
+
+.materia button {
+  background-color: #4CAF50; /* Verde para las materias disponibles */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.materia button:disabled {
+  background-color: #ccc; /* Gris para los botones deshabilitados */
+  cursor: not-allowed;
+}

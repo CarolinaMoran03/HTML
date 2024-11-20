@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Matrícula Universitaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Matrícula Universitaria</h1>
+        
+        <div class="form-group">
+            <label for="promedio">Promedio General:</label>
+            <input type="number" id="promedio" step="0.1" min="0" max="10" value="8.5" onchange="validarPromedioGeneral()">
+        </div>
+
+        <div class="form-group">
+            <label for="ultimo-semestre">¿Último semestre?</label>
+            <select id="ultimo-semestre" onchange="actualizarMaximoMaterias()">
+                <option value="no">No</option>
+                <option value="si">Sí</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nivel-aprobado">Nivel Aprobado:</label>
+            <select id="nivel-aprobado" onchange="actualizarMateriasPorNivel()" style="height: 40px;">
+                <option value="1">Nivel 1</option>
+                <option value="2">Nivel 2</option>
+                <option value="3">Nivel 3</option>
+                <option value="4">Nivel 4</option>
+                <option value="5">Nivel 5</option>
+                <option value="6">Nivel 6</option>
+                <option value="7">Nivel 7</option>
+                <option value="8">Nivel 8</option>
+            </select>
+        </div>
+
+        <div class="nivel-selector">
+            <label>Seleccionar Nivel:</label>
+            <div>
+                <button onclick="filtrarPorNivel(1)">1er Nivel</button>
+                <button onclick="filtrarPorNivel(2)">2do Nivel</button>
+                <button onclick="filtrarPorNivel(3)">3er Nivel</button>
+                <button onclick="filtrarPorNivel(4)">4to Nivel</button>
+                <button onclick="filtrarPorNivel(5)">5to Nivel</button>
+                <button onclick="filtrarPorNivel(6)">6to Nivel</button>
+                <button onclick="filtrarPorNivel(7)">7mo Nivel</button>
+                <button onclick="filtrarPorNivel(8)">8vo Nivel</button>
+            </div>
+        </div>
+
+        <!-- Este div se llenará dinámicamente con las materias de cada nivel -->
+        <div id="materias-disponibles" class="materias-grid"></div>
+        
+        <div class="selected-subjects">
+            <h3>Materias Seleccionadas:</h3>
+            <ul id="lista-materias"></ul>
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="resumen">
+            <h3>Resumen de Inscripción</h3>
+            <div id="resumen-materias"></div>
+            <button onclick="validarInscripcion()">Validar Inscripción</button>
+        </div>
+
+        <div id="validacion-final"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
